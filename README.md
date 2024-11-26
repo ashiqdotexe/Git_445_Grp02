@@ -90,7 +90,7 @@ Below is a representation of the dataset, showing images alongside their corresp
 
 | **Image**                | **Mask**                |
 |---------------------------|-------------------------|
-| ![Image1](img\image1.png)             | ![Mask1](img\mask1.png)            |
-| ![Image2](img\image2.png)             | ![Mask2](img\mask2.png)            |
+| ![Image1](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\image1.png)             | ![Mask1](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\mask1.png)            |
+| ![Image2](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\image2.png)             | ![Mask2](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\mask2.png)            |
 
-*(Replace `#` with actual image paths when available.)*
+
