@@ -90,7 +90,7 @@ Below is a representation of the dataset, showing images alongside their corresp
 
 | **Image**                | **Mask**                |
 |---------------------------|-------------------------|
-| ![Image1](Dataset\train\Images\0a7d30b252359a10fd298b638b90cb9ada3acced4e0c0e5a3692013f432ee4e9.png)             | ![Mask1](Dataset\train\masks\0a056bcf04e0a5841590d9068e53967fab4f0c37936b8736c659620c1305e82a.png)            |
-| ![Image2](Dataset\train\Images\0acd2c223d300ea55d0546797713851e818e5c697d073b7f4091b96ce0f3d2fe.png)             | ![Mask2](Dataset\train\masks\0adbf56cd182f784ca681396edc8b847b888b34762d48168c7812c79d145aa07.png)            |
+| ![Image1](img\image1.png)             | ![Mask1](img\mask1.png)            |
+| ![Image2](img\image2.png)             | ![Mask2](img\mask2.png)            |
 
-
+*(Replace `#` with actual image paths when available.)*
