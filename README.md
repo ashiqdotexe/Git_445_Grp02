@@ -54,17 +54,15 @@ CSE445
      source venv/bin/activate
      ```
 
-4. Run the scripts:
-   - **Training**:
-     ```bash
-     python train.py
-     ```
-   - **Evaluation**:
-     ```bash
-     python eval.py
-     ```
+4. Run the notebook:
 
-   *(Note: Scripts are currently under development.)*
+   - **Cell Nuclei Segmentation**:
+     Open the `Cell_Nuclei.ipynb` notebook and run the cells for training and evaluation.
+     
+     You can run the notebook using Jupyter Notebook or JupyterLab:
+     ```bash
+     jupyter notebook Cell_Nuclei.ipynb
+     ```
 
 ---
 
@@ -72,25 +70,22 @@ CSE445
 
 ### About the Project
 
-This project utilizes the **UNET architecture** for the segmentation task. UNET is a convolutional neural network (CNN) primarily designed for biomedical image segmentation. It employs a symmetric encoder-decoder structure, where the encoder extracts features, and the decoder reconstructs the segmented image. Skip connections between corresponding encoder and decoder layers preserve spatial information, leading to highly accurate segmentation results.
+This project focuses on regression tasks using various machine learning models. Initially, the following models will be employed for training and prediction:
 
-#### Models to be used in the future:
+- **Linear Regression**: A simple model for predicting a continuous target variable based on linear relationships between input features.
+- **Decision Tree Regressor**: A model that uses a decision tree to predict continuous values by learning simple decision rules inferred from the input features.
+- **Random Forest Regressor**: An ensemble learning method that combines multiple decision trees to improve accuracy and prevent overfitting.
+- **K-Nearest Neighbors Regressor (KNN)**: A non-parametric model that predicts the target variable based on the average of the nearest K data points.
 
-- **RESUNET**: A modified version of UNET incorporating residual blocks for improved feature learning.
-- **DEEPLABV3+**: A semantic segmentation model that leverages atrous convolutions for capturing contextual information.
-- Additional advanced architectures to be explored.
-
-### Dataset
-
-The **2018 Data Science Bowl dataset** is used for training the UNET architecture. This dataset comprises 670 pairs of images and corresponding masks. These images exhibit diverse shapes, sizes, and heterogeneous backgrounds, making it ideal for training robust segmentation models.
+Future plans involve exploring more advanced models, including **UNET** for segmentation tasks and its variants, such as **RESUNET** and **DEEPLABV3+**, for more complex tasks related to image segmentation.
 
 #### Example Images:
 
-Below is a representation of the dataset, showing images alongside their corresponding masks:
+Below is a representation of the dataset, showing images:
 
 | **Image**                | **Mask**                |
 |---------------------------|-------------------------|
-| ![Image1](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\image1.png)             | ![Mask1](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\mask1.png)            |
-| ![Image2](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\image2.png)             | ![Mask2](D:\Nsu\Summer 2024\CSE445\Git_445_Grp02\img\mask2.png)            |
+| ![Image1](Dataset\\train\\Images\\image_00.png)             | ![Image3](Dataset\\train\\Images\\image_03.png)            |
+| ![Image2](Dataset\\train\\Images\\image_01.png)             | ![Image4](Dataset\\train\\Images\\image_04.png)            |
 
 
