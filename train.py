@@ -60,7 +60,7 @@ def tf_dataset(X, Y, batch=8):
     return dataset
 
 def load_data(path, split=0.2):
-    images = sorted(glob(os.path.join(path, "images", "*.jpg")))
+    images = sorted(glob(os.path.join(path, "images", "*.png")))
     masks = sorted(glob(os.path.join(path, "masks", "*.jpg")))
     size = int(len(images) * split)
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     csv_path = "files/data.csv"
 
     """ Dataset """
-    dataset_path = "/media/nikhil/ML/ml_dataset/DSB/"
+    dataset_path = "Dataset\train"
     (train_x, train_y), (valid_x, valid_y), (test_x, test_y) = load_data(dataset_path)
     train_x, train_y = shuffle(train_x, train_y)
 
