@@ -7,11 +7,9 @@ from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from tensorflow.python.keras.callbacks import ModelCheckpoint, CSVLogger, ReduceLROnPlateau, EarlyStopping
-from tensorflow.python.keras.optimizers import Adam
 from tensorflow.python.keras.metrics import Recall, Precision
 from model import build_unet
 from metrics import dice_coef, iou
-
 
 
 H = 256
@@ -60,8 +58,8 @@ def tf_dataset(X, Y, batch=8):
     return dataset
 
 def load_data(path, split=0.2):
-    images = sorted(glob(os.path.join(path, "images", "*.png")))
-    masks = sorted(glob(os.path.join(path, "masks", "*.jpg")))
+    images = sorted(glob(os.path.join(path, "Images", "*.png")))
+    masks = sorted(glob(os.path.join(path, "masks", "*.png")))
     size = int(len(images) * split)
 
     train_x, valid_x = train_test_split(images, test_size=size, random_state=42)
@@ -119,7 +117,7 @@ if __name__ == "__main__":
     """ Model """
     model = build_unet((H, W, 3))
     metrics = [dice_coef, iou, Recall(), Precision()]
-    model.compile(loss="binary_crossentropy", optimizer=Adam(lr), metrics=metrics)
+    model.compile(loss="binary_crossentropy", optimizer=lr, metrics=metrics)
 
     callbacks = [
         ModelCheckpoint(model_path, verbose=1, save_best_only=True),
